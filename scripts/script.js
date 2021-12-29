@@ -19,6 +19,22 @@ divs.forEach((div) => {
 //code to clear grid when reset button is pressed
 newButton.addEventListener("click", () => {
     divs.forEach((div) => {
-        div.style.backgroundColor = "white";
+        div.style.backgroundColor = "white"; //erase the drawing
     });
+
+    let numSquares = prompt("Enter the number of squares per side for the new grid (must be 100 or less)", "16");
+    let cancelText;
+    if (numSquares == null || numSquares == "") {
+        cancelText = "User cancelled the prompt.";
+    } else if (numSquares > 100 || numSquares < 0) {
+        cancelText = "Invalid number;"
+    } else {
+        let numFractionsString ="";
+        for (let j = 0; j < numSquares; j++) {
+            numFractionsString = numFractionsString.concat(" 1fr");
+        }
+        container.style.gridTemplateColumns = numFractionsString;
+        container.style.gridTemplateRows = numFractionsString;
+    }
+
 });
