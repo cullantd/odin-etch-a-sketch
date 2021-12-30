@@ -7,8 +7,6 @@ body {
 
 #div-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* Each div is 1/16th of the width */
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* Each div is 1/16th of the height */
     width: 750px;
     height: 750px;
     border: 1px solid;
